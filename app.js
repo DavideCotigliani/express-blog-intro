@@ -5,6 +5,9 @@ const app = express()
 // definisco il numero di porta
 const port= 4000
 
+// asset statici
+app.use(express.static('public'));
+
 //definisco la prima rotta
 app.get('/',(req,res)=>{
 console.log('Server del mio blog');
@@ -16,31 +19,31 @@ app.get('/bacheca', (req,res)=>{
         {
             titolo: 'ciambellone',
             contenuto: 'lorem ipsum',
-            immagine: 'immagini/ciambellone.jpeg',
+            immagine: 'public/immagini/ciambellone.jpeg',
             tags: ['buono', 'gustoso','delizioso']
         },
         {
             titolo: 'cracker barbabietola',
             contenuto: 'lorem ipsum',
-            immagine: 'immagini/cracker_barbabietola.jpeg',
+            immagine: 'public/immagini/cracker_barbabietola.jpeg',
             tags: ['friabile', 'super','aperitivo']
         },
         {
             titolo: 'pane fritto',
             contenuto: 'lorem ipsum',
-            immagine: 'immagini/pane_fritto_dolce.jpeg',
+            immagine: 'public/immagini/pane_fritto_dolce.jpeg',
             tags: ['dorato', 'ottimo','classico']
         },
         {
             titolo: 'pasta barbabietola',
             contenuto: 'lorem ipsum',
-            immagine: 'immagini/pasta_barbabietola.jpeg',
+            immagine: 'public/immagini/pasta_barbabietola.jpeg',
             tags: ['saziante', 'fantastica','sfiziosa']
         },
         {
             titolo: 'torta paesana',
             contenuto: 'lorem ipsum',
-            immagine: 'immagini/torta_paesana.jpeg',
+            immagine: 'public/immagini/torta_paesana.jpeg',
             tags: ['tradizionale', 'indimenticabile','travolgente']
         }
     ];
