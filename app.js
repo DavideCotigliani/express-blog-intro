@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 //definisco la prima rotta
 app.get('/',(req,res)=>{
-console.log('Server del mio blog');
+res.send('Server del mio blog');
 })
 
 //creo la rotta bacheca
@@ -19,31 +19,31 @@ app.get('/bacheca', (req,res)=>{
         {
             titolo: 'ciambellone',
             contenuto: 'lorem ipsum',
-            immagine: 'public/immagini/ciambellone.jpeg',
+            immagine: '/immagini/ciambellone.jpeg',
             tags: ['buono', 'gustoso','delizioso']
         },
         {
             titolo: 'cracker barbabietola',
             contenuto: 'lorem ipsum',
-            immagine: 'public/immagini/cracker_barbabietola.jpeg',
+            immagine: '/immagini/cracker_barbabietola.jpeg',
             tags: ['friabile', 'super','aperitivo']
         },
         {
             titolo: 'pane fritto',
             contenuto: 'lorem ipsum',
-            immagine: 'public/immagini/pane_fritto_dolce.jpeg',
+            immagine: '/immagini/pane_fritto_dolce.jpeg',
             tags: ['dorato', 'ottimo','classico']
         },
         {
             titolo: 'pasta barbabietola',
             contenuto: 'lorem ipsum',
-            immagine: 'public/immagini/pasta_barbabietola.jpeg',
+            immagine: '/immagini/pasta_barbabietola.jpeg',
             tags: ['saziante', 'fantastica','sfiziosa']
         },
         {
             titolo: 'torta paesana',
             contenuto: 'lorem ipsum',
-            immagine: 'public/immagini/torta_paesana.jpeg',
+            immagine: '/immagini/torta_paesana.jpeg',
             tags: ['tradizionale', 'indimenticabile','travolgente']
         }
     ];
